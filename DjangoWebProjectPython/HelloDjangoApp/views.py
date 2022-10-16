@@ -3,6 +3,15 @@ from datetime import datetime
 from django.shortcuts import render
 # Create your views here.
 
+def about(request):
+    return render(
+        request,
+        "HelloDjangoApp/about.html",
+        {
+            'title' : "About HelloDjangoApp",
+            'content' : "Example app page for Django."
+        }
+    )
 
 def index(request):
 
